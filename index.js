@@ -316,10 +316,23 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if (score >= 90) {
+      console.log("A");
+    }
+      else if (score >= 80) {
+        console.log("B");
+      }
+      else if (score >= 70) {
+        console.log("C");
+      }
+      else if (score >= 60) {
+        console.log("D");
+      }
+      else { console.log("F");
+      }
   }
-  
+grade(71)
   
   
   
