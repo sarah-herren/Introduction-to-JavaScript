@@ -253,9 +253,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+var convertedMiles = miles(50);
+
+function miles(kilometerConversion){
+    return kilometerConversion * 0.621371;
+
   }
+  miles()
+  console.log(convertedMiles);
 
 
 
