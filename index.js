@@ -291,11 +291,16 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(countDown){
+  for (let i = countDown; i >= 1; i--) {
+      
+    let remaining = i - 1;
+
+    console.log( i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + remaining + " bottles of soda on the wall")
   }
+}
 
-
+annoyingSong(23)
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
