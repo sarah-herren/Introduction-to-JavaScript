@@ -123,9 +123,9 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-var amountFood = hungryDog(1,15);
 
-function hungryDog(age, weight) {
+
+function hungryDog(weight, age) {
 
   if (age <= .333) {
     return weight * .1;
@@ -139,7 +139,7 @@ function hungryDog(age, weight) {
   if (age >= 1) {
   
   if (weight <= 5) {
-    return weight *.05;
+    return weight * .05;
   }
     else if (weight <= 10) {
       return weight * .04;
@@ -154,7 +154,7 @@ function hungryDog(age, weight) {
 }    
 hungryDog();
 
-console.log(amountFood); 
+
 
 
 
@@ -176,69 +176,70 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-
-
-function game(user, computer) {
-  var computer1 = Math.random();
+var computer = Math.random();
   
-      if (computer1 < 0.34) {
-      computer = "scissors";
+      if (computer < 0.34) {
+      computer = 'scissors';
       }
-          else if (computer1 < 0.67) {
-          computer = "rock";
+          else if (computer < 0.67) {
+          computer = 'rock';
           } 
           else {
-          computer = "paper";
+          computer = 'paper';
           }
   
       console.log("Computer: " + computer);
   
-   var user = "scissors";   
+   var user = 'scissors';   
       
       console.log("You: " + user);
+
+function game(user, computer) {
   
-      if (user === "rock") {  
-          
-          if (computer === "rock") {
-          console.log("it's a tie");
-          }
-          else if (computer === "scissors") {
-              console.log("You win!");
-          }
-          else {
-              console.log("You lose!");
-          }
-      }
+  if (user === "rock") {  
+        
+    if (computer === "rock") {
+    return "it's a tie";
+    }
+    else if (computer === "scissors") {
+        return "you win!";
+    }
+    else {
+        return"you lose!";
+    }
+}
+
+if (user === "paper") {
+
+    if (computer === "paper") {
+    return "it's a tie";
+    }
+     else if (computer === "scissors") {
+    return "you lose!";
+    }
+    else {
+    return "you win!";
+    }
+}
+
+if (user === "scissors") {
+
+    if (computer === "scissors") {
+    return "it's a tie";
+    }
+    else if (computer === "paper") {
+    return "you win!";
+    }
+    else {
+    return "you lose!";
+    }
+}
+
+
+}
+game();
   
-      if (user === "paper") {
   
-          if (computer === "paper") {
-          console.log("it's a tie");
-          }
-           else if (computer === "scissors") {
-          console.log("You lose!");
-          }
-          else {
-          console.log("You win!");
-          }
-      }
-  
-      if (user === "scissors") {
-  
-          if (computer === "scissors") {
-          console.log("it's a tie");
-          }
-          else if (computer === "paper") {
-          console.log("You win!");
-          }
-          else {
-          console.log("You lose!");
-          }
-      }
-  
-  
-  }
-  game();
   
   
 
@@ -271,14 +272,14 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-var convertedFeet = feet(43);
+
 
 function feet(centimeters){
-    return centimeters * 0.0328084;
+    return centimeters / 30.48;
   }
  
   feet()
-  console.log(convertedFeet);
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -296,7 +297,7 @@ function annoyingSong(countDown){
       
     let remaining = i - 1;
 
-    console.log( i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + remaining + " bottles of soda on the wall")
+    return i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + remaining + " bottles of soda on the wall";
   }
 }
 
@@ -318,18 +319,18 @@ Using the grade function below do the following:
   
 function grade(score){
     if (score >= 90) {
-      console.log("A");
+      return"you got a A";
     }
       else if (score >= 80) {
-        console.log("B");
+        return "you got a B";
       }
       else if (score >= 70) {
-        console.log("C");
+        return "you got a C";
       }
       else if (score >= 60) {
-        console.log("D");
+        return "you got a D";
       }
-      else { console.log("F");
+      else { return "you got a F";
       }
   }
 grade(71)
